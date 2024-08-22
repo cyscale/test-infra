@@ -21,7 +21,7 @@ data "aws_iam_policy_document" "topic" {
 
     principals {
       type        = "AWS"
-      identifiers = ["arn:aws:iam::789815788242:root"]
+      identifiers = [local.external_principal]
     }
   }
 }

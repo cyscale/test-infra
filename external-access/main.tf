@@ -23,4 +23,8 @@ provider "aws" {
   }
 }
 
+locals {
+  external_principal = "arn:aws:iam::789815788242:root"
+}
+
 data "aws_caller_identity" "current" {}

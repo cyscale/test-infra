@@ -32,6 +32,6 @@ resource "aws_kms_key_policy" "example" {
 
 resource "aws_kms_grant" "external_access" {
   key_id            = aws_kms_key.external_access.key_id
-  grantee_principal = "arn:aws:iam::789815788242:root"
+  grantee_principal = local.external_principal
   operations        = ["Decrypt"]
 }
